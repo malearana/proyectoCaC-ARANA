@@ -1,0 +1,103 @@
+/*hoja de estilos de mi proyecto
+*/
+p  {
+    font-size : 15px;
+    font-family : arial,helvetica;
+    font-weight : normal;
+    padding-top: 15px;
+    }
+
+H1 {
+    font-size : 16pt;
+    font-family : verdana,arial;
+    text-decoration : underline;
+    text-align : center;
+    }  
+h2 {
+    font-size: 12pt;
+    font-family : verdana,arial;
+    text-decoration:solid;
+    text-align : center
+}
+a { text-decoration: none;}
+header .listaItem{
+    list-style: none;
+    display: inline;
+}
+.contenedorLogoNav{
+    background-color: rgb(53,58,64);
+    /*height: 200px;*/
+    font-size: 1.5rem;
+    color:white;
+}
+.linkNav{
+    text-decoration: none;
+}
+
+.colorfondonav{
+    color: rgb(51, 58, 54);
+}
+
+.colorBlanco{
+    color: rgb(255, 255, 255);
+}
+.colorGris{
+    color: rgb(154, 141, 152);
+}
+.colorVerde{
+    color: rgb(49, 143, 67);
+}
+ .conferencia  {
+    background-image: url("../assets/img/ba1.jpg");
+    height: 600px;
+ }       
+ .lugarFecha  {
+    background-image: url("../assets/img/honolulu.jpg");
+ } 
+ .colorfondonav {
+    background-color: rgb(85, 83, 83);
+    }
+ .main {
+    height: auto
+    back-g;
+ }   
+.titulomain{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+ }
+
+.colorFondoGradiente{
+    background-image: linear-gradient(to right, #1c3844, #1c3f4f, #1c465a, #1c4c66, #1e5372);
+}
+/*estilados del header*/
+/*
+header nav ul li{
+    list-style: none;
+}*/
+/*
+.ocultar{
+    display: none;
+}*/
+
+/*propiedad que se llama display, la tienen todos los elementos por defecto
+
+display:block; ocupan todo el ancho de su contenedor padre , div, footer, nav, section, header, main, article, aside
+display:inline; ocupan solo lo que tienen como contenido, img, iframe, a , span , video
+
+display:inline-block; ocupan solo lo que tienen como contenido, img, iframe, a , span , video, pero se comportan como block (para el concepto de box modeling)
+
+display:none; no ocupa lugar en el html, no se ve en la web
+
+display:flex; hace que el contenedor sea un contenedor flexible y esto habilita muchas propiedas magicas (flexbox)
+
+display:grid; hace que el contenedor sea un contenedor grilla ,me habilita ubicar a los hijos en filas y columnas
+
+*/
+
+footer {
+    background-image: linear-gradient(to right top, #1d3737, #254a46, #315e54, #41735f, #558768);
+    color: white;
+    height: 100px;
+    padding-top: 20px;
+}
