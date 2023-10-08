@@ -78,8 +78,6 @@ header .listaItem{
  .colorfondonav {
     background-color: rgb(85, 83, 83);
     }
- 
-
 .colorFondoGradiente{
     background-image: linear-gradient(to right, #1c3844, #1c3f4f, #1c465a, #1c4c66, #1e5372);
 }
