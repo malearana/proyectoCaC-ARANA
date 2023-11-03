@@ -2,7 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to- fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Proyecto Integrador Front Alejandra Arana</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="shortcut icon" href="../assets/img/codoacodo.png" type="image/x-icon">
@@ -14,7 +14,7 @@
                 <nav class="navbar navbar-expand-lg colorfondonav navbar-dark ">
                     <div class="container">
                       <a class="navbar-brand" href="#">
-                        <img src="../assets/img/codoacodo.png" alt="Logo Codo a Codo " loading="lazy" width="100px" class="d-inline-block align-text-center"> 
+                        <img src="../assets/img/codoacodo.png" alt="Logo Codo a Codo " width="100px" class="d-inline-block align-text-center"> 
                          Conf. Bs.As.
                       </a>
                       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,46 +88,60 @@
                 <p class="h3 text-uppercase text-center">valor de ticket $200</p>
               </div>
 
-                <!-- Formulario  -->
+   <!-- Formulario  -->
  
     <div class="container-fluid col-7">
-        <form class="row g-3" id="compraEntradas">
+        <form id="compraEntradas" class="row g-3 " >
           
-          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputNombre" placeholder="Nombre"  aria-label="Nombre" >
-          </div>
-          <div class="col-md-6">
-            <input type="text" class="form-control" id="inputApellido" placeholder="Apellido"  aria-label="Apellido">
-          </div>
-          <div class="col-12">
-            <input type="email" class="form-control" id="inputEmail" placeholder="Correo" aria-label="Correo">
-          </div>
-          
-          <div class="col-md-6">
-            <label for="inputCantidad" class="form-label">Cantidad</label>
-            <input type="text" class="form-control" id="inputCantidad" placeholder="cantidad">
-          </div>
-          <div class="col-md-6">
-            <label for="inputCategoria" class="form-label">Categoría</label>
-            <select id="inputCategoria" class="form-select" >
-              <option selected>Estudiante</option>
-              <option>Trainee</option>
-              <option>Junior</option>
-              <option>General</option>
-            </select>
-          </div>
-      
-          <div class="alert alert-primary" role="alert" >
-            <p class="mb-1" id="importeTotal">Total a Pagar: $</p>
-          </div>
-          
-          <div class="col">
-              <button class="btn btn-success col-sm-12  botonEnviar" type="button" id="btnBorrar" onclick="borrar();">Borrar</button>
-          </div>
-          <div class="col">
-              <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="btnResumen"  onclick="calcularTotal();">Resumen</button>
+          <div class="col-md mb-3 ">
+            <input type="text" class="form-control" id="nombre" placeholder="Nombre"  aria-label="Nombre"  required>
+            <div class="invalid-feedback" id="errorNombre">
+              Ingrese Nombre
             </div>
           </div>
+          <div class="col-md mb-3">
+            <input type="text" class="form-control" id="apellido" placeholder="Apellido"  aria-label="Apellido" required>
+            <div class="invalid-feedback" id="errorApellido">
+              Ingrese Apellido
+            </div>
+          </div>
+          <div class="col-12">
+            <input type="email" class="form-control" id="email" placeholder="Correo" aria-label="Correo" required>
+            <div class="invalid-feedback" id="errorEmail">
+              Ingrese un mail valido
+            </div>
+          </div>
+          <div class="col-md mb-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="number" min="1" step="1" class="form-control" id="cantidad" placeholder="Cantidad" aria-label="Cantidad"/>
+            <div class="invalid-feedback" id="errorCantidad">
+              Ingrese cantidad de tickets
+            </div>
+          </div>
+
+          <div class="col-md mb-3">
+            <label for="categoria" class="form-label">Categoría</label>
+            <select class="form-select" aria-label="Categoría" id="categoria">
+              <option value="General"  selected>General</option>
+              <option value="Estudiante">Estudiante</option>
+              <option value="Trainee">Trainee</option>
+              <option value="Junior">Junior</option>
+            </select>
+         
+          </div>
+          
+          <div class="alert alert-primary mt-2 mb-4" role="alert" >
+            Total a Pagar: $ <span id="total" class="text-dark"></span>
+          </div>
+          
+          <div class="col">
+              <button class="btn btn-success col-sm-12  botonEnviar" type="reset" id="botonBorrar" >Borrar</button>
+          </div>
+          <div class="col">
+              <button class="btn btn-success col-sm-12 botonEnviar" type="button" id="botonResumen" >Resumen</button>
+            </div>
+            
+          
         
         </form>
       </div>
@@ -164,5 +178,6 @@
                 </div>
               </div>
         </footer>
+        <script src="../js/tickets.js"></script>
     </body>
 </html>
